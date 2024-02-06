@@ -4,7 +4,7 @@
 	export let data;
 
 	function refresh() {
-		invalidate('http://localhost:4000/stocks');
+		invalidate('stock:actively-trading');
 	}
 </script>
 
