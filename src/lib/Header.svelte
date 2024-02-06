@@ -1,3 +1,11 @@
+<script>
+	import { page } from '$app/stores';
+</script>
+
+<svelte:head>
+	<title>{$page.data.title || 'SvelteKit Demo'}</title>
+</svelte:head>
+
 <header class="layout-header">
 	<a href="/">Home</a>
 	<a href="/products">Products</a>
