@@ -11,6 +11,10 @@
 	<Header />
 {/if}
 
+{#if $page.data.notification}
+	<p>{$page.data.notification}</p>
+{/if}
+
 Welcome {data.username}
 <slot />
 
