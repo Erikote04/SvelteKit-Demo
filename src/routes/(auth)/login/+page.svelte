@@ -17,7 +17,7 @@
 		if (response.ok) {
 			goto("/");
 		} else {
-				alert(data.message); 
+			alert(data.message); 
 		}
 	};
 </script>
