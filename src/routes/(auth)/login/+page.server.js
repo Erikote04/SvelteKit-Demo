@@ -16,5 +16,9 @@ export const actions = {
 
 		cookies.set('token', 'token_value', { path: '/' });
         return { success: true };
-	}
+	},
+    logout: ({ cookies, url }) => {
+		cookies.delete('token', { path: '/' });
+		throw redirect(303, url.searchParams.get('redirectTo') || '/');
+    }
 };

@@ -17,17 +17,10 @@
 	{#if !$page.data.username}
 		<a href="/login" style="margin-left: auto;">Login</a>
 	{:else}
-		<button
-			on:click={async () => {
-				const response = await fetch('/api/auth/logout', {
-					method: 'POST'
-				});
-				if (response.ok) {
-					invalidateAll();
-				}
-			}}
-			style="margin-left: auto;"
-		>Sing out </button>
+		<!--Not being in the login path the action has to indicate the path and the action-->.
+		<form method="POST" action="/login?/logout&redirectTo={$page.url.pathname}">
+			<button type="submit">Logout</button>
+		</form>
 	{/if}
 
 	<button
