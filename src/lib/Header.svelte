@@ -13,9 +13,9 @@
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
 	<a href="/news">News</a>
-	
+
 	{#if !$page.data.username}
-		<a href="/login">Login</a>
+		<a href="/login" style="margin-left: auto;">Login</a>
 	{/if}
 
 	<button
@@ -41,5 +41,14 @@
 		color: #e9c46a;
 		text-decoration: none;
 		margin: 0 20px;
+	}
+
+	button {
+		cursor: pointer;
+		margin: 0 20px;
+		border: none;
+		border-radius: 4px;
+		color: #264653;
+		background-color: #e9c46a;
 	}
 </style>
