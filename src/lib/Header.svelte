@@ -42,6 +42,7 @@
 	.layout-header {
 		padding: 10px;
 		display: flex;
+		align-items: center;
 		font-size: 30px;	
 		color: #e9c46a;
 		background-color: #264653;
