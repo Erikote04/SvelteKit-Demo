@@ -16,6 +16,15 @@
 
 	{#if !$page.data.username}
 		<a href="/login" style="margin-left: auto;">Login</a>
+	{:else}
+		<button
+			on:click={() => {
+				fetch('/api/auth/logout', {
+					method: 'POST'
+				});
+			}}
+			style="margin-left: auto;"
+		>Sing out </button>
 	{/if}
 
 	<button
@@ -46,6 +55,7 @@
 	button {
 		cursor: pointer;
 		margin: 0 20px;
+		padding: 10px;
 		border: none;
 		border-radius: 4px;
 		color: #264653;
