@@ -13,6 +13,7 @@
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
 	<a href="/news">News</a>
+	<a href="/login" style="margin-left: auto;">Login</a>
 
 	<button
 		on:mouseover={async () => {
@@ -26,16 +27,16 @@
 </header>
 
 <style>
+	.layout-header {
+		padding: 10px;
+		display: flex;
+		font-size: 30px;	
+		color: #e9c46a;
+		background-color: #264653;
+	}
 	a {
 		color: #e9c46a;
 		text-decoration: none;
 		margin: 0 20px;
-	}
-	.layout-header {
-		background-color: #264653;
-		color: #e9c46a;
-		font-size: 30px;
-		text-align: center;
-		padding: 10px;
 	}
 </style>
