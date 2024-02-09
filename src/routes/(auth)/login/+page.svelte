@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	let username = '';
 	let password = '';
 	const handleSubmit = async () => {
@@ -9,8 +11,14 @@
 				password
 			})
 		});
+
 		const data = await response.json();
-		console.log(data);
+
+		if (response.ok) {
+			goto("/");
+		} else {
+				alert(data.message); 
+		}
 	};
 </script>
 
