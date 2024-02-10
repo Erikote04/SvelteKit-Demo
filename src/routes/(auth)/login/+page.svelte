@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
+
 	export let form;
 
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
@@ -17,7 +18,8 @@
 		name="username" 
 		id="username" 
 		placeholder="Username" 
-		value={form?.username || ''}/>
+		value={form?.username || ''}
+	/>
 	<br />
 	{#if form?.usernameMissing}
 		<p style="color: red;">Username is required!</p>
@@ -25,7 +27,12 @@
 	<br />
 
 	<label for="password">Password</label><br />
-	<input type="text" name="password" id="password" placeholder="Password" />
+	<input 
+		type="text" 
+		name="password" 
+		id="password" 
+		placeholder="Password" 
+	/>
 	<br />
 	{#if form?.passwordMissing}
 		<p style="color: red;">Password is required!</p>

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { goto, invalidateAll, preloadData } from '$app/navigation';
+	import { goto, preloadData } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -47,6 +47,7 @@
 		color: #e9c46a;
 		background-color: #264653;
 	}
+	
 	a {
 		color: #e9c46a;
 		text-decoration: none;
