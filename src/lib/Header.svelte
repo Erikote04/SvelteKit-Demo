@@ -18,8 +18,12 @@
 		<a href="/login" style="margin-left: auto;">Login</a>
 	{:else}
 		<!--Not being in the login path the action has to indicate the path and the action-->.
-		<form method="POST" action="/login?/logout&redirectTo={$page.url.pathname}">
-			<button type="submit">Logout</button>
+		<form 
+			method="POST" 
+			action="/login?/logout&redirectTo={$page.url.pathname}"
+			style="margin-left: auto;"
+		>
+			<button type="submit" >Logout</button>
 		</form>
 	{/if}
 
